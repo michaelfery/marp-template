@@ -1,0 +1,104 @@
+ /* @theme soat */
+
+@import 'default';
+
+/*********************************************
+* GLOBAL STYLES
+*********************************************/
+@font-face {
+  font-family: Barlow;
+  src: url('themes/soat/fonts/Barlow-Regular.ttf');
+}
+
+section
+{
+  font-family: Barlow;
+}
+
+section {
+  --main-accent-color: #00e6a7;
+  --main-accent-dark-color: #00AD7D;
+  --main-dark-color: #110E28;
+  --secondary-color: #5B9BD5;
+
+  /* light theme */
+  --main-bg-color: white;
+  --main-title-color: var(--main-accent-color);
+  --main-subtitle-color: white;
+  --main-font-color: var(--main-dark-color);
+  --main-slide-title-color: var(--main-accent-color);
+  --main-progress-color: var(--main-accent-color);
+  --chapter-bg-color: var(--main-dark-color);
+  --chapter-title-color: var(--main-accent-color);
+  --chapter-content-color: white;
+}
+
+section {
+    background: var(--main-bg-color) url(./themes/soat/LOGO_COULEUR_BASELINE.png) no-repeat center center;
+    background-size: 10%;
+    background-position: bottom 15px right 15px;
+}
+
+/*********************************************
+ * TITLE SLIDE STYLES
+ *********************************************/
+
+section.title-page {
+    background: url("./themes/soat/title-page-bg.png");
+    background-size: cover;
+    background-position: right bottom;
+}
+
+section.chapter-page {
+    background: var(--main-bg-color) url("./themes/soat/background-white.svg");
+}
+
+section.title-page h1,
+section.title-page h2,
+section.title-page h3,
+section.title-page h4,
+section.title-page h5,
+section.title-page h6 {
+    width: 50%;
+}
+section.title-page h1 {
+  color: var(--main-title-color);
+  text-transform: uppercase;
+  font-size: 7;
+}
+section.title-page h2 {
+  color: var(--main-subtitle-color);
+}
+
+section.chapter-page h1,
+section.chapter-page h2,
+section.chapter-page h3,
+section.chapter-page h4,
+section.chapter-page h5,
+section.chapter-page h6 {
+    width: 50%;
+}
+section.chapter-page h1 {
+    color: #00ad7d;/**dark-green**/
+}
+
+/*********************************************
+ * PAGES
+ *********************************************/
+
+section.centered-page {
+  text-align: center;
+}
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+
+img[alt~='round'] {
+    border-radius: 50%;
+}
+/* img[alt~='center'] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} */
