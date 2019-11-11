@@ -1,0 +1,21 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup node
+        uses: actions/setup-node@v1
+      - run: npm install
+      - name: Convert markdown to slides deck
+        run: npm run -s build
+      - name: Upload deck to artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: deck
+          path: deck
