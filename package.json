@@ -1,0 +1,21 @@
+{
+  "name": "marp-cli-example",
+  "version": "0.1.0",
+  "author": "Michael Fery",
+  "license": "WTFPL",
+  "private": true,
+  "scripts": {
+    "build": "rimraf deck && npm run -s og-image && npm run -s pptx && npm run -s pdf",
+    "og-image": "marp --image png sample.md -o deck/sample.png --allow-local-files",
+    "pdf": "marp --pdf sample.md -o deck/sample.pdf --allow-local-files -- sample.md",
+    "pptx": "marp --pptx sample.md -o deck/sample.pptx --allow-local-files",
+    "start": "marp -ps sample.md"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^0.16.1",
+    "rimraf": "^3.0.0"
+  },
+  "marp": {
+    "themeSet": "./themes"
+  }
+}
